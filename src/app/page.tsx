@@ -1,6 +1,6 @@
 import dynamic from "next/dynamic";
 
-const GITHUB_JSON_LINK = "https://raw.githubusercontent.com/Chupapi-munyanyu/NullGraph/master/data.json";
+const GITHUB_JSON_LINK = "https://raw.githubusercontent.com/Chupapi-munyanyu/NullGraph/data/data.json";
 
 async function getJson() {
 
