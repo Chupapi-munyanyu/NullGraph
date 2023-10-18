@@ -1,9 +1,9 @@
-export interface Node extends d3.SimulationNodeDatum {
+export interface Node {
   id: number;
   name: string;
 }
 
-export interface Edge extends d3.SimulationLinkDatum<Node> {
+export interface Edge {
   scource: number;
   target: number;
 }

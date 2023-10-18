@@ -1,8 +1,4 @@
-'use client'
-
-import Reagraph from "@/components/Reagraph";
-import { Data } from "@/components/data";
-import { useEffect, useState } from "react";
+import dynamic from "next/dynamic";
 
 const GITHUB_JSON_LINK = "https://raw.githubusercontent.com/Chupapi-munyanyu/NullGraph/master/data.json";
 
@@ -14,15 +10,14 @@ async function getJson() {
   return data;
 }
 
-export default function Home() {
 
-  const [data, setData] = useState<Data>();
+const Reagraph = dynamic(() => import("../components/Reagraph"), {
+  ssr: false,
+});
 
-  useEffect(() => {
-    getJson().then(response =>
-      setData(response))
-  }, [])
+export default async function Home() {
 
+  const data = await getJson();
 
   return (
     <main className="flex min-h-screen flex-col items-center" >

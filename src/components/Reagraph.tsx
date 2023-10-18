@@ -1,9 +1,7 @@
-import * as d3 from "d3";
-import { useEffect, useRef } from "react";
-import { GraphCanvas, GraphCanvasRef, useSelection } from "reagraph";
+'use client'
 
-const width = window.innerWidth;
-const height = window.innerHeight;
+import { useRef } from "react";
+import { GraphCanvas, GraphCanvasRef, useSelection } from "reagraph";
 
 const darkTheme =
 {
