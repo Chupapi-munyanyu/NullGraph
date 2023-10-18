@@ -1,7 +1,5 @@
 'use client'
 
-import Graph from "@/components/Graph";
-import GraphReact from "@/components/GraphReact";
 import Reagraph from "@/components/Reagraph";
 import { Data } from "@/components/data";
 import { useEffect, useState } from "react";
