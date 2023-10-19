@@ -3,8 +3,7 @@
 import { useRef } from "react";
 import { GraphCanvas, GraphCanvasRef, useSelection } from "reagraph";
 
-const darkTheme =
-{
+const darkTheme = {
   canvas: {
     background: '#1e1e2e'
   },
@@ -93,11 +92,16 @@ const Reagraph = ({ data }: any) => {
 
       layoutType="forceDirected2d"
       layoutOverrides={{
-        nodeStrength: -50,
-        linkDistance: 500
+        nodeStrength: -100,
+        linkDistance: 500,
       }}
       sizingType="centrality"
       edgeInterpolation="curved"
+
+      glOptions={{
+        preserveDrawingBuffer: true
+      }}
+      animated={false}
     />
   )
 }
